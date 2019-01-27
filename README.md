@@ -5,5 +5,5 @@ You can see the project page in [freeCodeCamp](https://learn.freecodecamp.org/fr
 also you can view it in [codepen](https://codepen.io/xinthauro/full/VqozqW).
 
 ## Screenshots
-![Screenshot](screenshots/random-quote-machine.jpg)
+![Screenshot](screenshots/random_quote_machine.jpg)
 
