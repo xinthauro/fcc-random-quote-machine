@@ -1,12 +1,13 @@
 import React from 'react';
 
+import Layout from './components/Layout';
 import RandomQuoteMachine from './components/RamdomQuoteMachine';
 
-const App = props => {
+const App = () => {
   return (
-    <div>
+    <Layout>
       <RandomQuoteMachine />
-    </div>
+    </Layout>
   );
 };
 

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+
+.container {
+  --font-main: 'Roboto', sans-serif;
+  --font-second: 'Open Sans', sans-serif;
+  --color-dark: #212529;
+  --color_dark-grey: #6c757d;
+  --color-light-grey: #e2e6ea;
+  --color-light: #f8f9fa;
+
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
+
+.blockquote {
+  color: var(--color-dark-grey);
+  font-family: var(--font-main);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.blockquote p {
+  text-align: center;
+}
+
+.blockquote footer {
+  margin-right: 0.25rem;
+  font-family: var(--font-second);
+  font-size: 1rem;
+  text-align: right;
+}
+
+.blockquote footer::before {
+  content: '\2014\00A0';
+}
+
+.blockquote cite {
+  font-style: italic;
+}
+
+.buttongroup {
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  border: none;
+  cursor: default;
+}
+
+.button:first-child {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.button:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.button:hover {
+  background-color: var(--color-light-grey);
+}
+
+.button:focus {
+  outline: none;
+}

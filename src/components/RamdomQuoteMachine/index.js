@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
 import { getQuote } from './quote';
+import style from './index.module.css';
 
 const Quote = props => {
   return (
-    <blockquote>
+    <blockquote className={style.blockquote}>
       <p id='text'>{props.quote.text}</p>
       <footer id='author'>
         <cite>{props.quote.author}</cite>
@@ -13,11 +14,11 @@ const Quote = props => {
   );
 };
 
-const Tweet = props => {
+const TweetQuote = props => {
   const textURL = `"${props.quote.text}" ${props.quote.author}&hashtags=quotes`;
   const url = `https://twitter.com/intent/tweet?text=${encodeURI(textURL)}`;
   return (
-    <a href={url} target='_blank' rel='noopener noreferrer' id='tweet-quote'>
+    <a id='tweet-quote' className={style.button} href={url} target='_blank' rel='noopener noreferrer'>
       <i className='fab fa-twitter'></i>
     </a>
   );
@@ -25,7 +26,7 @@ const Tweet = props => {
 
 const NewQuote = props => {
   return (
-    <button onClick={props.onClick} id='new-quote'>
+    <button id='new-quote' className={style.button} type='button' onClick={props.onClick}>
       New quote
     </button>
   );
@@ -34,10 +35,12 @@ const NewQuote = props => {
 const RandomQuoteMachine = () => {
   const [quote, newQuote] = useState(getQuote());
   return (
-    <div id='quote-box'>
+    <div id='quote-box' className={style.container}>
       <Quote quote={quote} />
-      <Tweet quote={quote} />
-      <NewQuote onClick={() => newQuote(getQuote())} />
+      <div className={style.buttongroup}>
+        <TweetQuote quote={quote} />
+        <NewQuote onClick={() => newQuote(getQuote())} />
+      </div>
     </div>
   );
 };
