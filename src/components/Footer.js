@@ -1,35 +1,37 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn, faGithub, faFreeCodeCamp, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import style from './Footer.module.css';
 
 const LINKS = [
   {
     description: 'LinkedIn',
-    font: 'fab fa-linkedin-in',
+    font: faLinkedinIn,
     href: 'https://www.linkedin.com/in/carloslsilva/',
     className: style.linkedin
   },
   {
     description: 'GitHub',
-    font: 'fab fa-github',
+    font: faGithub,
     href: 'https://github.com/carloslsilva/',
     className: style.github
   },
   {
     description: 'freeCodeCamp',
-    font: 'fab fa-free-code-camp',
+    font: faFreeCodeCamp,
     href: 'https://www.freecodecamp.org/carloslsilva',
     className: style.freecodecamp
   },
   {
     description: 'Twitter',
-    font: 'fab fa-twitter',
+    font: faTwitter,
     href: 'https://twitter.com/carloslsilva?lang=en',
     className: style.twitter
   },
   {
     description: 'YouTube',
-    font: 'fab fa-youtube',
+    font: faYoutube,
     href: 'https://www.youtube.com/channel/UCD0Spg-lYsdrP_nE7Qfca3w',
     className: style.youtube
   }
@@ -41,7 +43,7 @@ const Links = () => {
       {LINKS.map(e => (
         <li key={e.description}>
           <a className={e.className} href={e.href} target='_blank' rel='noopener noreferrer'>
-            <i className={e.font} />
+            <FontAwesomeIcon icon={e.font} />
           </a>
         </li>
       ))}

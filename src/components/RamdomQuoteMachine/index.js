@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import { getQuote } from './quote';
 import style from './index.module.css';
@@ -19,7 +21,7 @@ const TweetQuote = props => {
   const url = `https://twitter.com/intent/tweet?text=${encodeURI(textURL)}`;
   return (
     <a id='tweet-quote' className={style.button} href={url} target='_blank' rel='noopener noreferrer'>
-      <i className='fab fa-twitter'></i>
+      <FontAwesomeIcon icon={faTwitter} />
     </a>
   );
 };
